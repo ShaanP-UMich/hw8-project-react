@@ -204,6 +204,7 @@ footer {
 .footer-links {
     display: flex;
     justify-content: center;
+    align-items: center;
     color: #E5E5E5;
 }
 

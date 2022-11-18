@@ -1,19 +1,73 @@
 import './css/style.css'
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import SkipLink from './SkipLink.ts';
+import Home from './Home';
 
-export default class Header extends Component {
-    render() {
-        return (
+export default function Header() {
+    const curr_pathname = useLocation().pathname;
+    // console.log(curr_pathname);
+
+    // Add Page Links here
+    // let pages = ["", "components", "showcase"];
+
+    let pages = [
+        {
+            'page_name': 'Home',
+            'path': "/",
+            'className': ''
+        },
+        {
+            'page_name': 'Components',
+            'path': "/components",
+            'className': ''
+        },
+        {
+            'page_name': 'Showcase',
+            'path': "/showcase",
+            'className': ''
+        }
+    ]
+
+    console.log(curr_pathname);
+
+    pages.forEach((page) => {
+        console.log(page);
+
+        if (curr_pathname === page.path) {
+            page.className = 'currentPage';
+        }
+    });
+
+    const page_links = pages.map((page) => (
+        <Link key={page.page_name} className={page.className} to={page.path}>{page.page_name}</Link>
+    ));
+
+    console.log(page_links);
+
+    return (
+        <div>
+            {/* <div class="skip"><a href="#main">Skip to Main Content</a></div> */}
+
+            <div className='skip'>
+                <SkipLink className='skip'>
+                    <button type='button'>Skip to Main Content</button>
+                </SkipLink>
+            </div>
+
+            <div className="header_content">
+                <p className="site_title">Michigan Keyboards</p>
+            </div>
+
             <header>
                 <nav>
-                    <div class="nav_links">
-                        <Link class="currentPage" to="">Home</Link>
-                        <Link to="components">Components</Link>
-                        <Link to="showcase">Showcase</Link>
+                    <div className="nav_links">
+                        {page_links}
                     </div>
+
+                    {/* <p style={{ color: 'white' }}>{curr_pathname}</p> */}
                 </nav>
             </header>
-        );
-    }
+        </div>
+    );
 }

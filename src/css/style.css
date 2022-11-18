@@ -20,21 +20,22 @@ body {
 }
 
 /* Style the 'Skip Content' button */
-.skip a {
+.skip button {
     background: white;
     left: 0;
     padding: 6px;
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.skip a {
+.skip button {
     position: absolute;
     top: -40px;
 }
 
-.skip a:focus {
+.skip button:focus {
     position: absolute;
     top: 20px;
 }
@@ -105,6 +106,7 @@ nav {
 }
 
 .nav_links {
+    color: #E5E5E5;
     display: flex;
     justify-content: center;
 }

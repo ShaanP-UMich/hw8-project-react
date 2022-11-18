@@ -4,7 +4,7 @@ import App from './App';
 // import { HashRouter } from 'react-router-dom'
 import reportWebVitals from './testing/reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('reactEntry'));
 root.render(
   <React.StrictMode>
     <App />

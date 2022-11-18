@@ -29,11 +29,7 @@ export default function Header() {
         }
     ]
 
-    console.log(curr_pathname);
-
     pages.forEach((page) => {
-        console.log(page);
-
         if (curr_pathname === page.path) {
             page.className = 'currentPage';
         }
@@ -42,8 +38,6 @@ export default function Header() {
     const page_links = pages.map((page) => (
         <Link key={page.page_name} className={page.className} to={page.path}>{page.page_name}</Link>
     ));
-
-    console.log(page_links);
 
     return (
         <div>

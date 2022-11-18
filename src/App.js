@@ -1,19 +1,27 @@
-import logo from './logo.svg';
 import './css/style.css'
 import React, { Component } from 'react';
-import { render } from '@testing-library/react';
 
-class App extends Component {
-  render() {
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
+import Home from './Home';
+import Components from './Components';
+import Showcase from './Showcase';
 
-    return (
+export default function App() {
+  return (
+    <Router>
       <div>
-        <p>A single p tag in a div</p>
-        <p className='title'>Another p tag!</p>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/components" element={<Components />} />
+          <Route exact path="/showcase" element={<Showcase />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
       </div>
-    );
-  }
+    </Router>
+  );
 }
-
-export default App;

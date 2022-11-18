@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 
 export default class Showcase extends Component {
     render() {
-
-
         return (
             <main class="container" id="main">
                 <h1 class="title">Finished Builds</h1>

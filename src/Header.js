@@ -6,10 +6,6 @@ import Home from './Home';
 
 export default function Header() {
     const curr_pathname = useLocation().pathname;
-    // console.log(curr_pathname);
-
-    // Add Page Links here
-    // let pages = ["", "components", "showcase"];
 
     let pages = [
         {
@@ -41,8 +37,6 @@ export default function Header() {
 
     return (
         <div>
-            {/* <div class="skip"><a href="#main">Skip to Main Content</a></div> */}
-
             <div className='skip'>
                 <SkipLink className='skip'>
                     <button type='button'>Skip to Main Content</button>

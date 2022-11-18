@@ -1,3 +1,5 @@
+// Courtesy of https://levelup.gitconnected.com/build-an-accessible-skip-to-content-anchor-link-with-react-140903f3bd7e
+
 import React from 'react';
 
 interface SkipLinkProperties {

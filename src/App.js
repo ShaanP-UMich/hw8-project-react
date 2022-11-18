@@ -16,7 +16,7 @@ export default function App() {
     <Router>
       <div>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/hw8-project-react" element={<Home />} />
           <Route exact path="/components" element={<Components />} />
           <Route exact path="/showcase" element={<Showcase />} />
           {/* <Route path="*" element={<NotFound />} /> */}

@@ -45,6 +45,12 @@ body {
     border-width: 2px;
 }
 
+.currentPage:focus {
+    border: solid;
+    border-width: 2px;
+    border-bottom-width: 0px;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;

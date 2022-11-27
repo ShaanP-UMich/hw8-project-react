@@ -1,7 +1,7 @@
 import './css/style.css'
 import React, { Component } from 'react';
-import case_1 from './imgs/case_1.png'
-import case_2 from './imgs/case_2.png'
+// import case_1 from './imgs/case_1.png'
+// import case_2 from './imgs/case_2.png'
 
 export default class Components extends Component {
     constructor(props) {
@@ -15,16 +15,30 @@ export default class Components extends Component {
     }
 
     componentDidMount() {
-        const { cases, keycaps, plates } = this.state;
-
-        cases = [
+        let case_defs = [
             {
-                'img_url': "TODO"
+                'img_url': require('./imgs/case_1.png')
+            },
+            {
+                'img_url': require('./imgs/case_2.png')
             }
         ]
+
+        this.setState({
+            cases: case_defs
+        });
     }
 
     render() {
+        if (this.state.cases.length === 0)
+            return;
+
+
+        // console.log(this.state.cases);
+        // console.log(this.state.cases[0]['img_url']);
+        // let case_1 = this.state.cases[0]['img_url'];
+        // let case_2 = this.state.cases[1]['img_url'];
+
         return (
             <main className="container" id="main">
                 <h1 className="title">Cases</h1>

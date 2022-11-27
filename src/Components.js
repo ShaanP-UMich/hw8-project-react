@@ -4,6 +4,26 @@ import case_1 from './imgs/case_1.png'
 import case_2 from './imgs/case_2.png'
 
 export default class Components extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            cases: [],
+            keycaps: [],
+            plates: []
+        };
+    }
+
+    componentDidMount() {
+        const { cases, keycaps, plates } = this.state;
+
+        cases = [
+            {
+                'img_url': "TODO"
+            }
+        ]
+    }
+
     render() {
         return (
             <main className="container" id="main">

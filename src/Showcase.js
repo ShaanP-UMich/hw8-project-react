@@ -31,7 +31,32 @@ export default class Showcase extends Component {
                 'img_url': require("./imgs/full_4.png"),
                 'img_alt': 'Bubblegum themed keyboard with off-white and violet keycaps',
                 'title': 'KBD75 V3.1 VIOLET PURPLE MECHANICAL KEYBOARD WITH SIMPLE PURPLE DYE-SUB KEYCAPS'
-            }
+            },
+            {
+                'img_url': require("./imgs/full_5.png"),
+                'img_alt': 'White keyboard with depe blue keycaps',
+                'title': 'BLADE65 R2 E-WHITE KEYBOARD WITH PBTFANS KLEIN BLUE'
+            },
+            {
+                'img_url': require("./imgs/full_8.png"),
+                'img_alt': 'White keyboard with cement grey keycaps',
+                'title': 'BLADE60 DZ60 RGB HOT-SWAP KEYBOARD WITH CEMENT GREY JAPANESE PBT KEYCAPS'
+            },
+            {
+                'img_url': require("./imgs/full_6.png"),
+                'img_alt': 'All white keyboard with 2 black accent keys',
+                'title': 'TOFU65 HOT-SWAP KEYBOARD WITH PBTFANS BOW KEYCAPS'
+            },
+            {
+                'img_url': require("./imgs/full_7.png"),
+                'img_alt': 'All black keyboard with 2 white accent keys',
+                'title': 'KBD75 V3.1 VIOLET PURPLE MECHANICAL KEYBOARD WITH SIMPLE PURPLE DYE-SUB KEYCAPS'
+            },
+            {
+                'img_url': require("./imgs/full_9.png"),
+                'img_alt': 'Black keyboard with cement & dark grey keycaps',
+                'title': 'TOFU65 MECHANICAL KEYBOARD WITH CEMENT GREY JAPANESE PBT KEYCAPS'
+            },
         ];
 
         this.setState({

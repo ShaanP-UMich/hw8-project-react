@@ -1,5 +1,6 @@
 import './css/style.css'
 import React, { Component } from 'react';
+import ExtraInfo from './ExtraInfo';
 // import case_1 from './imgs/case_1.png'
 // import case_2 from './imgs/case_2.png'
 
@@ -17,11 +18,26 @@ export default class Components extends Component {
     componentDidMount() {
         let case_defs = [
             {
-                'img_url': require('./imgs/case_1.png')
-            },
-            {
-                'img_url': require('./imgs/case_2.png')
+                'img_url': require('./imgs/case_1.png'),
+                'img_alt': 'White keyboard case with black outline',
+                'title': 'D84 V2 GASKET MOUNT 75%',
+                'extra_info': [
+                    {
+                        'title': "Specs",
+                        'bullets': [
+                            'Structure: Gasket Mount',
+                            'Case: D84 V2 top aluminum case and bottom aluminum/ acrylic case',
+                            'Typing Angle: 7°',
+                            'Weight bar: Aluminum material, weight bar color matches up with upper case',
+                            'Designer: KBDfans Wei',
+                            'Friendly Reminds: Only case included in this product, no PCB and other items'
+                        ]
+                    }
+                ]
             }
+            // {
+            //     'img_url': require('./imgs/case_2.png')
+            // }
         ]
 
         this.setState({
@@ -33,68 +49,54 @@ export default class Components extends Component {
         if (this.state.cases.length === 0)
             return;
 
+        const { cases } = this.state;
+
 
         // console.log(this.state.cases);
         // console.log(this.state.cases[0]['img_url']);
         // let case_1 = this.state.cases[0]['img_url'];
         // let case_2 = this.state.cases[1]['img_url'];
 
+        const cases_list = cases.map((item) => {
+            const extra_info = item.extra_info;
+            // console.log(extra_info);
+            let extra_info_html = [];
+
+            extra_info_html = extra_info.map((info) => (
+                <ExtraInfo key={info.title} title={info.title} bullets={info.bullets} />
+            ));
+
+            // console.log(extra_info_html);
+
+
+            return (
+                <div className="image-group">
+                    <img src={item['img_url']} alt={item['img_alt']} />
+                    <div className="image-group-text">
+                        <p>{item.title}</p>
+                        {extra_info_html}
+                        {/* <div className="image-group-text-extra">
+                            <p><strong>Specs</strong></p>
+                            <ul>
+                                <li>Structure: Gasket Mount</li>
+                                <li>Case: D84 V2 top aluminum case and bottom aluminum/ acrylic case</li>
+                                <li>Typing Angle: 7°</li>
+                                <li>Weight bar: Aluminum material, weight bar color matches up with upper case</li>
+                                <li>Designer: KBDfans Wei</li>
+                                <li>Friendly Reminds: Only case included in this product, no PCB and other items</li>
+                            </ul>
+                        </div> */}
+                    </div>
+                </div>
+            );
+            // <Link key={page.page_name} className={page.className} to={page.path}>{page.page_name}</Link>
+        });
+
         return (
             <main className="container" id="main">
                 <h1 className="title">Cases</h1>
                 <div className="gallery">
-                    <div className="image-group">
-                        <img src={case_1} alt="White keyboard case with black outline" />
-                        <div className="image-group-text">
-                            <p>D84 V2 GASKET MOUNT 75%</p>
-                            <div className="image-group-text-extra">
-                                <p><strong>Specs</strong></p>
-                                <ul>
-                                    <li>Structure: Gasket Mount</li>
-                                    <li>Case: D84 V2 top aluminum case and bottom aluminum/ acrylic case</li>
-                                    <li>Typing Angle: 7°</li>
-                                    <li>Weight bar: Aluminum material, weight bar color matches up with upper case</li>
-                                    <li>Designer: KBDfans Wei</li>
-                                    <li>Friendly Reminds: Only case included in this product, no PCB and other items</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="image-group">
-                        <img src={case_2} alt="Wooden keyboard case with rounded sides" />
-                        <div className="image-group-text">
-                            <p>65% WOODEN CASE AND WRIST</p>
-                            <div className="image-group-text-extra">
-                                <p><strong>Specs</strong></p>
-                                <ul>
-                                    <li>Material: Wood</li>
-                                    <li>Structure: Tray mount</li>
-                                </ul>
-                                <p><strong>Notes</strong></p>
-                                <ul>
-                                    <li>The case and wrist are made of organic wood, it is a normal phenomenon if there exists a
-                                        little gouge, little stripe, or slight color difference</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="image-group">
-                        <img src="imgs/case_3.png" alt="Creamy white keyboard case" />
-                        <div className="image-group-text">
-                            <p>KBD75 V3.1 ALUMINUM CASE</p>
-                            <div className="image-group-text-extra">
-                                <p><strong>Specs</strong></p>
-                                <ul>
-                                    <li>Structure: Top-mount</li>
-                                    <li>Material: Aluminum material</li>
-                                    <li>Layout: 75% layout</li>
-                                    <li>Weight: around 1.35 kg</li>
-                                    <li>Typing angle: 7°</li>
-                                    <li>Friendly Reminds: Only a keyboard case, no other components</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    {cases_list}
                 </div>
 
                 <h1 className="title">Keycaps</h1>

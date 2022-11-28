@@ -13,6 +13,8 @@ export default class Components extends Component {
             keycaps: [],
             plates: []
         };
+
+        this.mapSubsection = this.mapSubsection.bind(this);
     }
 
     componentDidMount() {
@@ -54,27 +56,58 @@ export default class Components extends Component {
                         ]
                     }
                 ]
+            },
+            {
+                'img_url': require('./imgs/case_3.png'),
+                'img_alt': 'Creamy white keyboard case',
+                'title': 'KBD75 V3.1 ALUMINUM CASE',
+                'extra_info': [
+                    {
+                        'title': "Specs",
+                        'bullets': [
+                            'Structure: Top-mount',
+                            'Material: Aluminum material',
+                            'Layout: 75% layout',
+                            'Weight: around 1.35 kg',
+                            'Typing angle: 7°',
+                            'Friendly Reminds: Only a keyboard case, no other components'
+                        ]
+                    }
+                ]
             }
         ]
 
+        let keycaps_defs = [
+            {
+                'img_url': require('./imgs/case_1.png'),
+                'img_alt': 'White keyboard case with black outline',
+                'title': 'D84 V2 GASKET MOUNT 75%',
+                'extra_info': [
+                    {
+                        'title': "Specs",
+                        'bullets': [
+                            'Structure: Gasket Mount',
+                            'Case: D84 V2 top aluminum case and bottom aluminum/ acrylic case',
+                            'Typing Angle: 7°',
+                            'Weight bar: Aluminum material, weight bar color matches up with upper case',
+                            'Designer: KBDfans Wei',
+                            'Friendly Reminds: Only case included in this product, no PCB and other items'
+                        ]
+                    }
+                ]
+            },
+        ]
+
         this.setState({
-            cases: case_defs
+            cases: case_defs,
+            keycaps: keycaps_defs
         });
     }
 
-    render() {
-        // if (this.state.cases.length === 0)
-        //     return;
+    mapSubsection(subsection = []) {
+        let subsection_list = [];
 
-        const { cases } = this.state;
-
-
-        // console.log(this.state.cases);
-        // console.log(this.state.cases[0]['img_url']);
-        // let case_1 = this.state.cases[0]['img_url'];
-        // let case_2 = this.state.cases[1]['img_url'];
-
-        const cases_list = cases.map((item) => {
+        subsection_list = subsection.map((item) => {
             const extra_info = item.extra_info;
             // console.log(extra_info);
             let extra_info_html = [];
@@ -83,31 +116,25 @@ export default class Components extends Component {
                 <ExtraInfo key={info.title} title={info.title} bullets={info.bullets} />
             ));
 
-            // console.log(extra_info_html);
-
-
             return (
-                <div className="image-group">
+                <div className="image-group" key={item['title']}>
                     <img src={item['img_url']} alt={item['img_alt']} />
                     <div className="image-group-text">
                         <p>{item.title}</p>
                         {extra_info_html}
-                        {/* <div className="image-group-text-extra">
-                            <p><strong>Specs</strong></p>
-                            <ul>
-                                <li>Structure: Gasket Mount</li>
-                                <li>Case: D84 V2 top aluminum case and bottom aluminum/ acrylic case</li>
-                                <li>Typing Angle: 7°</li>
-                                <li>Weight bar: Aluminum material, weight bar color matches up with upper case</li>
-                                <li>Designer: KBDfans Wei</li>
-                                <li>Friendly Reminds: Only case included in this product, no PCB and other items</li>
-                            </ul>
-                        </div> */}
                     </div>
                 </div>
             );
-            // <Link key={page.page_name} className={page.className} to={page.path}>{page.page_name}</Link>
         });
+
+        return subsection_list;
+    }
+
+    render() {
+        const { cases, keycaps, plates } = this.state;
+
+        const cases_list = this.mapSubsection(cases);
+        const keycaps_list = this.mapSubsection(keycaps);
 
         return (
             <main className="container" id="main">
@@ -118,30 +145,7 @@ export default class Components extends Component {
 
                 <h1 className="title">Keycaps</h1>
                 <div className="gallery">
-                    <div className="image-group">
-                        <img src="imgs/keycaps_1.png" alt="Clean, white Japanese compatible keycaps" />
-                        <div className="image-group-text">
-                            <p>R3 EPBT X GOK KURO/SHIRO PBT</p>
-                            <div className="image-group-text-extra">
-                                <p><strong>Specs</strong></p>
-                                <ul>
-                                    <li>Material: PBT material</li>
-                                    <li>Profile: Cherry Profile</li>
-                                    <li>Production Method: Dye-sub and Reverse Dye-sub</li>
-                                    <li>Manufacture: ePBT</li>
-                                    <li>Compatible with Cherry MX switch and clone</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="image-group">
-                        <img src="imgs/keycaps_2.png" />
-                        <p>PBTFANS CARPENTER</p>
-                    </div>
-                    <div className="image-group">
-                        <img src="imgs/keycaps_3.png" />
-                        <p>PBTFANS KABUKI-CHO 歌舞伎町</p>
-                    </div>
+                    {keycaps_list}
                 </div>
 
                 <h1 className="title">Plates</h1>

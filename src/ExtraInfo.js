@@ -14,7 +14,7 @@ export default function ExtraInfo(props) {
     let bullets_list = [];
 
     bullets.forEach((bullet) => {
-        bullets_list.push(<li>{bullet}</li>);
+        bullets_list.push(<li key={bullet}>{bullet}</li>);
     });
 
     // console.log(bullets_list);

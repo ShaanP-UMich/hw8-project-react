@@ -172,7 +172,7 @@ export default class Components extends Component {
             {
                 'img_url': require('./imgs/plate_3.png'),
                 'img_alt': 'Brass keyboard plate with gaskets on the sides',
-                'title': 'D84 V2 PLATE（INCLUDING GASKET)',
+                'title': 'D84 V2 PLATE',
                 'extra_info': [
                     {
                         'title': "Includes",

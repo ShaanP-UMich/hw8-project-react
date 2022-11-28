@@ -187,6 +187,7 @@ main {
 
 .image-group p {
     text-align: center;
+    font-size: 20px;
 }
 
 .image-group-text-extra {
@@ -197,6 +198,11 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 20px;
+}
+
+.gallery-grid .image-group {
+    max-width: 500px;
 }
 
 /* Footer Styling */
@@ -294,5 +300,19 @@ footer {
         font-size: 45px;
         padding-bottom: 20px;
         padding-top: 20px;
+    }
+
+    /* Showcase gallery-grid Styling */
+    .gallery-grid .image-group img {
+        width: 300px;
+    }
+
+    .gallery-grid .image-group p {
+        text-align: center;   
+    }
+
+    .gallery-grid .image-group {
+        flex-direction: column;
+        align-items: center;
     }
 }

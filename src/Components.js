@@ -34,10 +34,27 @@ export default class Components extends Component {
                         ]
                     }
                 ]
+            },
+            {
+                'img_url': require('./imgs/case_2.png'),
+                'img_alt': 'Wooden keyboard case with rounded sides',
+                'title': '65% WOODEN CASE AND WRIST',
+                'extra_info': [
+                    {
+                        'title': "Specs",
+                        'bullets': [
+                            'Material: Wood',
+                            'Structure: Tray mount'
+                        ]
+                    },
+                    {
+                        'title': "Notes",
+                        'bullets': [
+                            'The case and wrist are made of organic wood, it is a normal phenomenon if there exists a little gouge, little stripe, or slight color difference'
+                        ]
+                    }
+                ]
             }
-            // {
-            //     'img_url': require('./imgs/case_2.png')
-            // }
         ]
 
         this.setState({
@@ -46,8 +63,8 @@ export default class Components extends Component {
     }
 
     render() {
-        if (this.state.cases.length === 0)
-            return;
+        // if (this.state.cases.length === 0)
+        //     return;
 
         const { cases } = this.state;
 

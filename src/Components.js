@@ -75,32 +75,120 @@ export default class Components extends Component {
                     }
                 ]
             }
-        ]
+        ];
 
         let keycaps_defs = [
             {
-                'img_url': require('./imgs/case_1.png'),
-                'img_alt': 'White keyboard case with black outline',
-                'title': 'D84 V2 GASKET MOUNT 75%',
+                'img_url': require('./imgs/keycaps_1.png'),
+                'img_alt': 'Clean, white Japanese compatible keycaps',
+                'title': 'R3 EPBT X GOK KURO/SHIRO PBT',
                 'extra_info': [
                     {
                         'title': "Specs",
                         'bullets': [
-                            'Structure: Gasket Mount',
-                            'Case: D84 V2 top aluminum case and bottom aluminum/ acrylic case',
-                            'Typing Angle: 7°',
-                            'Weight bar: Aluminum material, weight bar color matches up with upper case',
-                            'Designer: KBDfans Wei',
-                            'Friendly Reminds: Only case included in this product, no PCB and other items'
+                            'Material: PBT material',
+                            'Profile: Cherry Profile',
+                            'Production Method: Dye-sub and Reverse Dye-sub',
+                            'Manufacture: ePBT',
+                            'Compatible with Cherry MX switch and clone',
                         ]
                     }
                 ]
             },
-        ]
+            {
+                'img_url': require('./imgs/keycaps_2.png'),
+                'img_alt': 'Minimalist off-white and grey keycaps',
+                'title': 'PBTFANS CARPENTER',
+                'extra_info': [
+                    {
+                        'title': "Specs",
+                        'bullets': [
+                            'Material: PBT material',
+                            'Production Method: Doubleshot',
+                            'Profile: Cherry Profile',
+                            'Manufacturer: PBTfans',
+                            'Packaging: ABS keycaps tray with designed tray cover',
+                            'Friendly Reminds: Only keycaps included, no keyboard',
+                            'Compatibility: Cherry MX switches and MX-style clones'
+                        ]
+                    }
+                ]
+            },
+            {
+                'img_url': require('./imgs/keycaps_3.png'),
+                'img_alt': 'Purple and Blue keycaps with some red-accented keycaps',
+                'title': 'PBTFANS KABUKI-CHO 歌舞伎町',
+                'extra_info': [
+                    {
+                        'title': "Specs",
+                        'bullets': [
+                            'Material: PBT material',
+                            'Profile: Cherry profile',
+                            'Production Method: Doubleshot/Tripleshot for JP Sub-Legends',
+                            'Manufacturer: PBTfans',
+                            'Packaging: ABS keycaps tray with designed tray cover',
+                            'Friendly Reminds: Only keycaps included, no keyboard',
+                            'Compatibility: Cherry MX switches and MX-style clones',
+                            'Designer: oay'
+                        ]
+                    }
+                ]
+            },
+        ];
+
+        let plates_defs = [
+            {
+                'img_url': require('./imgs/plate_1.png'),
+                'img_alt': '65% Aluminum keyboard plate',
+                'title': '65% ALUMINUM PLATE',
+                'extra_info': [
+                    {
+                        'title': "Specs",
+                        'bullets': [
+                            'Material: CNC Aluminum; Brass; Polycarbonate; Carbon Fiber',
+                            '1.5MM thickness',
+                            '65% layout',
+                            'Compatible with DZ65RGB V3 Hot-swap PCB, KBD67 V2 Solder PCB, Tofu65 case, etc',
+                        ]
+                    }
+                ]
+            },
+            {
+                'img_url': require('./imgs/plate_2.png'),
+                'img_alt': 'Polycarbonate, semi see-through keyboard plate',
+                'title': '60% PC MATERIAL PLATE',
+                'extra_info': [
+                    {
+                        'title': "Specs",
+                        'bullets': [
+                            'PC material',
+                            'The thickness of 1.5 mm',
+                            'Compatible with gh60, dz60, etc',
+                            'Only 2.25U Left Shift (Plate B) would fit with DZ60RGB V2 and DZ60RGB ANSI PCB',
+                        ]
+                    }
+                ]
+            },
+            {
+                'img_url': require('./imgs/plate_3.png'),
+                'img_alt': 'Brass keyboard plate with gaskets on the sides',
+                'title': 'D84 V2 PLATE（INCLUDING GASKET)',
+                'extra_info': [
+                    {
+                        'title': "Includes",
+                        'bullets': [
+                            'D84 V2 plate',
+                            'Gasket',
+                        ]
+                    }
+                ]
+            },
+        ];
 
         this.setState({
             cases: case_defs,
-            keycaps: keycaps_defs
+            keycaps: keycaps_defs,
+            plates: plates_defs
         });
     }
 
@@ -135,6 +223,7 @@ export default class Components extends Component {
 
         const cases_list = this.mapSubsection(cases);
         const keycaps_list = this.mapSubsection(keycaps);
+        const plates_list = this.mapSubsection(plates);
 
         return (
             <main className="container" id="main">
@@ -150,18 +239,7 @@ export default class Components extends Component {
 
                 <h1 className="title">Plates</h1>
                 <div className="gallery">
-                    <div className="image-group">
-                        <img src="imgs/plate_1.png" />
-                        <p>65% ALUMINUM</p>
-                    </div>
-                    <div className="image-group">
-                        <img src="imgs/plate_2.png" />
-                        <p>60% PC MATERIAL PLATE</p>
-                    </div>
-                    <div className="image-group">
-                        <img src="imgs/plate_3.png" />
-                        <p>D84 V2 PLATE（INCLUDING GASKET)</p>
-                    </div>
+                    {plates_list}
                 </div>
             </main>
         );

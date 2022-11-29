@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/hw8-project-react/static/css/main.74d00db5.css",
-    "main.js": "/hw8-project-react/static/js/main.0f691eb0.js",
+    "main.css": "/hw8-project-react/static/css/main.37acfa32.css",
+    "main.js": "/hw8-project-react/static/js/main.749e9ae6.js",
     "static/js/787.738cc45f.chunk.js": "/hw8-project-react/static/js/787.738cc45f.chunk.js",
+    "static/media/about_2.png": "/hw8-project-react/static/media/about_2.76e6145b4b7b5c88f2c8.png",
+    "static/media/why_1.png": "/hw8-project-react/static/media/why_1.b7016a7fa6cddba723d0.png",
     "static/media/full_8.png": "/hw8-project-react/static/media/full_8.cb65a35b12a534a0f2a5.png",
     "static/media/full_1.png": "/hw8-project-react/static/media/full_1.f43f6acd1b6b6b36ea3d.png",
     "static/media/keycaps_2.png": "/hw8-project-react/static/media/keycaps_2.7f62d20a2cefc5994f4e.png",
@@ -22,12 +24,12 @@
     "static/media/case_3.png": "/hw8-project-react/static/media/case_3.a4fd0157d81a5b4f647b.png",
     "static/media/case_1.png": "/hw8-project-react/static/media/case_1.2581044aec163edcc92c.png",
     "index.html": "/hw8-project-react/index.html",
-    "main.74d00db5.css.map": "/hw8-project-react/static/css/main.74d00db5.css.map",
-    "main.0f691eb0.js.map": "/hw8-project-react/static/js/main.0f691eb0.js.map",
+    "main.37acfa32.css.map": "/hw8-project-react/static/css/main.37acfa32.css.map",
+    "main.749e9ae6.js.map": "/hw8-project-react/static/js/main.749e9ae6.js.map",
     "787.738cc45f.chunk.js.map": "/hw8-project-react/static/js/787.738cc45f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74d00db5.css",
-    "static/js/main.0f691eb0.js"
+    "static/css/main.37acfa32.css",
+    "static/js/main.749e9ae6.js"
   ]
 }

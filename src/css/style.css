@@ -17,6 +17,7 @@ body {
     letter-spacing: 0.02rem;
     font-weight: 300;
     color: #363845;
+    line-height: 1.2;
 }
 
 /* Style the 'Skip Content' button */
@@ -150,25 +151,96 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
 }
 
-.home-page img {
+/* .home-page img {
     max-width: min(400px, 100%);
     overflow: hidden;
     padding: 30px;
     border-radius: 38px;
-}
+} */
 
 .home-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    /* width: 90%; */
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .home-section p {
     width: min(80%, 650px);
+}
+
+.home-section .title {
+    color: white;
+    margin: 0px;
+}
+
+.home-image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.home-image-container h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* .home-image-container img {
+    width: 100%;
+    height: 300px;
+    filter: blur(2px);
+    object-fit: fill;
+} */
+
+/* .home-image-banner {
+    width: 100%;
+    background-image: url('../imgs/about_2.png');
+    background-repeat: no-repeat;
+    background-size: fill;
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    filter: blur(2px);
+} */
+
+.home-image-banner {
+    width: 100%;
+    height: 28vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-image-banner::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 28vh;
+    backdrop-filter: blur(5px);
+}
+
+/* Different Home Page Banners */
+
+#about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.50)), url('../imgs/about_2.png');
+}
+
+#why {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.623)), url('../imgs/why_1.png');
 }
 
 .title {
@@ -177,7 +249,7 @@ main {
     font-size: 110px;
     text-align: center;
     margin-top: 4rem;
-    /* margin-bottom: 2.4rem; */
+    margin-bottom: 2.4rem;
     font-weight: 300;
     /* font-family: 'Cabin', sans-serif; */
     font-family: 'Varela Round', sans-serif;

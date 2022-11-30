@@ -1,6 +1,6 @@
 import './css/style.css'
 import React, { Component } from 'react';
-import ExtraInfo from './ExtraInfo';
+import ExtraInfo from './extraInfo';
 // import case_1 from './imgs/case_1.png'
 // import case_2 from './imgs/case_2.png'
 

@@ -1,8 +1,7 @@
 import './css/style.css'
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, useLocation } from "react-router-dom";
-import SkipLink from './SkipLink.ts';
-import Home from './Home';
+import SkipLink from './skipLink.ts';
 
 export default function Header() {
     const curr_pathname = useLocation().pathname;
@@ -43,11 +42,10 @@ export default function Header() {
                 </SkipLink>
             </div>
 
-            <div className="header_content">
-                <p className="site_title">Michigan Keyboards</p>
-            </div>
-
             <header>
+                <div className="header_content">
+                    <p className="site_title">Michigan Keyboards</p>
+                </div>
                 <nav>
                     <div className="nav_links">
                         {page_links}

@@ -8,10 +8,10 @@ import {
   Route
 } from "react-router-dom";
 
-import Home from './Home';
-import Components from './Components';
-import Showcase from './Showcase';
-import Header from './Header';
+import Home from './home';
+import Components from './components';
+import Showcase from './showcase';
+import Header from './header';
 
 const App = () => {
   return (

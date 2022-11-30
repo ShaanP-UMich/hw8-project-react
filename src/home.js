@@ -1,7 +1,7 @@
 import './css/style.css'
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import SkipLink from './SkipLink.ts';
+import SkipLink from './skipLink.ts';
 
 export default class Home extends Component {
     render() {

@@ -62,7 +62,7 @@ h2 {
 .header_content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     height: 100px;
     background-color: black;
@@ -72,6 +72,7 @@ h2 {
     font-size: 36px;
     color: #D90368;
     margin: 0px 20px;
+    text-decoration: none;
 }
 
 body header {
@@ -96,7 +97,7 @@ nav {
 
 .nav_links {
     color: #E5E5E5;
-    display: flex;
+    display: none;
     justify-content: center;
 }
 
@@ -168,6 +169,7 @@ main {
     width: 100%;
     margin-bottom: 30px;
     background-color: black;
+    z-index: -1;
 }
 
 .home-image-container h1 {
@@ -206,7 +208,7 @@ main {
 
 .embed-video-container iframe {
     padding: 20px;
-    width: 450px;
+    width: 75%;
     /* height: 225px; */
     aspect-ratio: 16 / 9;
 }
@@ -323,6 +325,16 @@ footer {
     .nav_links {
         display: flex;
         justify-content: flex-start;
+    }
+
+    .nav_links {
+        color: #E5E5E5;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #hamburger-menu-button {
+        display: none;
     }
 
     /* "How" section styling */

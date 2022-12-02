@@ -17,7 +17,6 @@ export default class Home extends Component {
                     <div className='home-section'>
                         <div className='home-image-container'>
                             <h1 className="title">Why</h1>
-                            {/* <img src={require('./imgs/about_2.png')} /> */}
                             <div id='why' className='home-image-banner'></div>
                         </div>
                         <p className="main-paragraph">Whether you're an enthusiast or a newbie, anyone can build the perfect
@@ -28,7 +27,6 @@ export default class Home extends Component {
                     <div className='home-section'>
                         <div className='home-image-container'>
                             <h1 className="title">How</h1>
-                            {/* <img src={require('./imgs/about_2.png')} /> */}
                             <div id='how' className='home-image-banner'></div>
                         </div>
                         <p className="main-paragraph">By following these simple guides, anyone can assembled their

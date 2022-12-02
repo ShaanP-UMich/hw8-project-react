@@ -1,14 +1,10 @@
 import './css/style.css'
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import SkipLink from './skipLink.ts';
 
 export default class Home extends Component {
     render() {
         return (
             <div>
-                {/* <div class="skip"><Link to="/#main">Skip to Main Content</Link></div> */}
-
                 <main className="home-page" id="main">
                     <div className='home-section'>
                         <div className='home-image-container'>

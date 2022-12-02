@@ -30,7 +30,7 @@ body {
     z-index: 1;
     font-family: 'Open Sans', sans-serif;
 }
-
+/* flip card, add tab index to every card */
 .skip button {
     position: absolute;
     top: -40px;
@@ -361,7 +361,8 @@ footer {
     }
 
     .image-group {
-        width: auto;
+        width: 100%;
+        flex-direction: row;
     }
 
     .image-group img {
@@ -369,7 +370,11 @@ footer {
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid .image-group {
+        max-width: 90%;
     }
 }
 

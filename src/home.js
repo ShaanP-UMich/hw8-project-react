@@ -9,7 +9,6 @@ export default class Home extends Component {
                     <div className='home-section'>
                         <div className='home-image-container'>
                             <h1 className="title">About</h1>
-                            {/* <img src={require('./imgs/about_2.png')} /> */}
                             <div id='about' className='home-image-banner'></div>
                         </div>
                         <p className="main-paragraph">A site showcasing beautifully built custom keyboards.</p>

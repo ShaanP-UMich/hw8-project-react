@@ -206,7 +206,7 @@ export default class Components extends Component {
 
             return (
                 <div className="image-group" key={item['title']}>
-                    <img src={item['img_url']} alt={item['img_alt']} />
+                    <img tabIndex={0} src={item['img_url']} alt={item['img_alt']} />
                     <div className="image-group-text">
                         <p>{item.title}</p>
                         {extra_info_html}

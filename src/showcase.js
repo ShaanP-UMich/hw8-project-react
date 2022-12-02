@@ -72,7 +72,7 @@ export default class Showcase extends Component {
         subsection_list = subsection.map((item) => {
             return (
                 <div className="image-group" key={item.title} >
-                    <img src={item.img_url} alt={item.img_alt} />
+                    <img tabIndex={0} src={item.img_url} alt={item.img_alt} />
                     <p>{item.title}</p>
                 </div>
             );

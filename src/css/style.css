@@ -284,6 +284,7 @@ main {
 
 .image-group-text {
     width: 100%;
+    padding-left: 10px;
 }
 
 .image-group p {
@@ -366,7 +367,7 @@ footer {
     }
 
     .image-group img {
-        width: 275px;
+        width: 300px;
     }
 
     .gallery-grid {

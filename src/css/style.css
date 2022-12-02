@@ -30,6 +30,7 @@ body {
     z-index: 1;
     font-family: 'Open Sans', sans-serif;
 }
+
 /* flip card, add tab index to every card */
 .skip button {
     position: absolute;
@@ -166,6 +167,7 @@ main {
     color: white;
     width: 100%;
     margin-bottom: 30px;
+    background-color: black;
 }
 
 .home-image-container h1 {
@@ -174,8 +176,6 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    /* TODO: fix this, doesn't look great */
-    background-color: black;
 }
 
 .home-image-banner {
@@ -349,8 +349,13 @@ footer {
         flex-direction: row;
     }
 
+    .image-group-flex {
+        flex-direction: column;
+        width: unset;
+    }
+
     .image-group img {
-        width: 300px;
+        width: 270px;
     }
 
     .gallery-grid {
@@ -395,6 +400,7 @@ footer {
     .image-group p {
         text-align: left;
         font-size: 20px;
+        max-width: 50%;
     }
 
     .image-group ul {

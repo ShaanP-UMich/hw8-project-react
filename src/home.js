@@ -29,7 +29,7 @@ export default class Home extends Component {
                             <h1 className="title">How</h1>
                             <div id='how' className='home-image-banner'></div>
                         </div>
-                        <p className="main-paragraph">By following these simple guides, anyone can assembled their
+                        <p className="main-paragraph">By following these simple guides, anyone can assemble their
                             very own custom keyboard.</p>
                         <div tabIndex={0} className='embed-video-container'>
                             <iframe src="https://www.youtube-nocookie.com/embed/Sm1DVbyeDiI" title="How to build your FIRST custom keyboard! (ON A BUDGET)" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen aria-hidden={true}></iframe>

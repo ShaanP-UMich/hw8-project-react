@@ -230,7 +230,7 @@ main {
 .title {
     display: block;
     color: #D90368;
-    font-size: 110px;
+    font-size: min(25vw, 110px);
     text-align: center;
     margin-top: 4rem;
     margin-bottom: 2.4rem;

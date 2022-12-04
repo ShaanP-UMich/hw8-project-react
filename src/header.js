@@ -64,7 +64,7 @@ export default function Header() {
                     </div>
 
                     <div id="myNav" className="overlay">
-                        <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+                        <span className="closebtn" onClick={closeNav}>&times;</span>
                         <div className="overlay-content">
                             {page_links}
                         </div>

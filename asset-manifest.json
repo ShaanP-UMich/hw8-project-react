@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hw8-project-react/static/css/main.f1980455.css",
-    "main.js": "/hw8-project-react/static/js/main.4ff1ec93.js",
+    "main.css": "/hw8-project-react/static/css/main.19657a08.css",
+    "main.js": "/hw8-project-react/static/js/main.1b7cb4cc.js",
     "static/js/787.738cc45f.chunk.js": "/hw8-project-react/static/js/787.738cc45f.chunk.js",
     "static/media/about_2.png": "/hw8-project-react/static/media/about_2.76e6145b4b7b5c88f2c8.png",
     "static/media/why_1.png": "/hw8-project-react/static/media/why_1.b7016a7fa6cddba723d0.png",
@@ -25,12 +25,12 @@
     "static/media/case_3.png": "/hw8-project-react/static/media/case_3.a4fd0157d81a5b4f647b.png",
     "static/media/case_1.png": "/hw8-project-react/static/media/case_1.2581044aec163edcc92c.png",
     "index.html": "/hw8-project-react/index.html",
-    "main.f1980455.css.map": "/hw8-project-react/static/css/main.f1980455.css.map",
-    "main.4ff1ec93.js.map": "/hw8-project-react/static/js/main.4ff1ec93.js.map",
+    "main.19657a08.css.map": "/hw8-project-react/static/css/main.19657a08.css.map",
+    "main.1b7cb4cc.js.map": "/hw8-project-react/static/js/main.1b7cb4cc.js.map",
     "787.738cc45f.chunk.js.map": "/hw8-project-react/static/js/787.738cc45f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1980455.css",
-    "static/js/main.4ff1ec93.js"
+    "static/css/main.19657a08.css",
+    "static/js/main.1b7cb4cc.js"
   ]
 }

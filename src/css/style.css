@@ -48,9 +48,13 @@ body {
 }
 
 .currentPage:focus {
-    border: solid;
-    border-width: 2px;
+    /* border: solid;
+    border-width: 2px; */
     /* border-bottom-width: 0px; */
+    border-color: #FE7F2D;
+    border-left: transparent;
+    border-right: transparent;
+    border-top: transparent;
 }
 
 h2 {

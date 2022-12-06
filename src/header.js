@@ -9,7 +9,7 @@ function openNav() {
     document.getElementById("myNav").style.display = "unset";
 }
 
-function closeNav() {
+function closeNav(e) {
     document.getElementById("myNav").style.height = "0%";
 }
 

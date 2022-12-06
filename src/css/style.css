@@ -108,7 +108,7 @@ nav a {
     text-align: center;
     padding: 18px 24px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     border-bottom: 4px solid transparent;
 }
 
@@ -118,6 +118,7 @@ nav a:hover {
 
 .currentPage {
     border-bottom: 4px #FE7F2D solid;
+    font-weight: bold;
     /* background-color: #333333; */
 }
 

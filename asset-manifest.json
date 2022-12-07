@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hw8-project-react/static/css/main.7c3b6149.css",
+    "main.css": "/hw8-project-react/static/css/main.2f3beaf3.css",
     "main.js": "/hw8-project-react/static/js/main.7df98754.js",
     "static/js/787.738cc45f.chunk.js": "/hw8-project-react/static/js/787.738cc45f.chunk.js",
     "static/media/about_2.png": "/hw8-project-react/static/media/about_2.76e6145b4b7b5c88f2c8.png",
@@ -25,12 +25,12 @@
     "static/media/case_3.png": "/hw8-project-react/static/media/case_3.a4fd0157d81a5b4f647b.png",
     "static/media/case_1.png": "/hw8-project-react/static/media/case_1.2581044aec163edcc92c.png",
     "index.html": "/hw8-project-react/index.html",
-    "main.7c3b6149.css.map": "/hw8-project-react/static/css/main.7c3b6149.css.map",
+    "main.2f3beaf3.css.map": "/hw8-project-react/static/css/main.2f3beaf3.css.map",
     "main.7df98754.js.map": "/hw8-project-react/static/js/main.7df98754.js.map",
     "787.738cc45f.chunk.js.map": "/hw8-project-react/static/js/787.738cc45f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c3b6149.css",
+    "static/css/main.2f3beaf3.css",
     "static/js/main.7df98754.js"
   ]
 }
